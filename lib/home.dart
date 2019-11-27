@@ -9,14 +9,14 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List<Player> _playersList = [
-    Player('sam', 0),
-    Player('juh', 0),
-    Player('keh', 0)
+    Player('sam'),
+    Player('juh'),
+    Player('keh')
   ];
   int _chosenNumber = 21;
 
   void addPlayer(String playerName) {
-    setState(() => _playersList.add(Player(playerName, 0)));
+    setState(() => _playersList.add(Player(playerName)));
     Navigator.of(context).pop();
   }
 

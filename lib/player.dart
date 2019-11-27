@@ -1,6 +1,17 @@
+enum PlayerStatus{
+  playing,
+  turn,
+  lost,
+  won
+}
+
 class Player{
   final String name;
-  final int points;
+  int points;
+  PlayerStatus status;
 
-  Player(this.name, this.points);
+  Player(String name) : this.name = name{
+    this.points = 0;
+    this.status = PlayerStatus.playing;
+  }
 }
